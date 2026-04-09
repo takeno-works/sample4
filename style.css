@@ -1,0 +1,527 @@
+html {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+  margin:0;
+}
+
+/* ヘッダー */
+
+section{
+    padding: 2rem 0;
+}
+
+.container{
+    max-width:1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    background: #25c225;
+    border-bottom: 1px solid #e5efe9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 横並びレイアウト */
+.header-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+/* ロゴ（左固定） */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0; /* ← 潰れ防止 */
+}
+
+/* ナビ全体 */
+.nav {
+    flex: 1; /* ← 真ん中に広げる */
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ナビメニュー */
+.nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ← これが重要：改行禁止 */
+.nav li {
+    white-space: nowrap;
+}
+
+/* ボタン（右固定） */
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0; /* ← 潰れ防止 */
+}
+
+/* ボタン */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap; /* ← これも改行防止 */
+}
+
+/* メイン */
+.hero-inner{
+    display: flex;
+    gap: 2rem;
+}
+
+/* カード */
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 25c225 solid 2rem;
+}
+
+.logo-list{
+    display: flex;
+    gap: 1rem;
+}
+
+.problem-solution-inner{
+    display: flex;
+    gap: 2rem;
+}
+
+.feature{
+    display: flex;
+    gap: 2rem;
+}
+
+.feature-image{
+    flex: 2;
+}
+
+.feature-text{
+    flex: 1;
+}
+
+.inquiry-content{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.inquiry-box{
+    display: flex;
+    gap: 2rem;
+}
+
+.function-inner{
+    display: flex;
+    gap: 2rem;
+}
+
+.news-headline{
+    display: flex;
+    gap: 2rem;
+}
+
+.cta-content{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ヘッダー調整 */
+.header-inner{
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn{
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn-gray{
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btn-orange{
+  background: #ff7a00;
+  color: #fff;
+}
+
+/* Hero */
+.hero{
+  background: white;
+}
+
+.hero-inner{
+  align-items: center;
+}
+
+.hero-title{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image img{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn-group{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn--primary{
+  background: #ff7a00;
+  color: #fff;
+}
+
+.btn--secondary{
+  border: 1px solid #ff7a00;
+  color: #ff7a00;
+}
+
+/* カード共通 */
+.card{
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card img{
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ロゴクラウド */
+.logo-cloud{
+  background: #fff;
+  text-align: center;
+}
+
+.logo-list{
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* result */
+.result{
+  text-align: center;
+  background: #fff;
+}
+
+.usability-badge,
+.introduce-badge{
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f1f1f1;
+  border-radius: 999px;
+}
+
+/* problem & solution */
+.problem{
+  background: #fff3f3;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.solution{
+  background: #f3f8ff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* features */
+.features-title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.features-title-accent{
+  color: #ff7a00;
+}
+
+/* inquiry */
+.inquiry{
+  background: rgb(27, 148, 27);
+  text-align: center;
+}
+
+.inquiry-box{
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.inquiry-button{
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ff7a00;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* support */
+.support{
+  background: #fff;
+}
+
+.support-title{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.support-lead{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* function */
+.function-title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.function-box{
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* example */
+.example{
+  background: #f9fafb;
+}
+
+/* material */
+.material{
+  background: #fff;
+}
+
+/* news */
+.news-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CTA */
+.cta{
+  background: rgb(47, 156, 47);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-box{
+  background: #fff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.cta-button{
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ff7a00;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* footer */
+.footer{
+  background: #222;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.footer a{
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-bottom{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+@media (max-width: 1024px){
+
+  .hero-inner{
+    flex-direction: column;
+  }
+
+  .feature{
+    flex-direction: column;
+  }
+
+  .function-inner{
+    flex-direction: column;
+  }
+
+  .problem-solution-inner{
+    flex-direction: column;
+  }
+
+  .cta-content{
+    flex-wrap: wrap;
+  }
+
+  .footer-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+/* =========================
+   スマホ（768px以下）
+========================= */
+@media (max-width: 768px){
+
+  /* ナビを非表示（よくあるLP仕様） */
+  .nav{
+    display: none;
+  }
+
+  .header-inner{
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-buttons{
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /* テキスト */
+  .hero-title{
+    font-size: 1.5rem;
+  }
+
+  /* ボタン縦並び */
+  .btn-group{
+    flex-direction: column;
+  }
+
+  /* カード1列 */
+  .card-list{
+    grid-template-columns: 1fr;
+  }
+
+  /* ロゴ折り返し */
+  .logo-list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* お知らせ縦 */
+  .news-headline{
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* CTA縦 */
+  .cta-content{
+    flex-direction: column;
+  }
+
+  .cta-box{
+    min-width: auto;
+    width: 100%;
+  }
+
+  /* フッター1列 */
+  .footer-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px){
+
+  .hero-title{
+    font-size: 1.3rem;
+  }
+
+  .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+}
